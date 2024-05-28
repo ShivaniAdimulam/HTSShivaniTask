@@ -8,7 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-const uri = "mongodb://localhost:27017/hts";
+const uri = "mongodb+srv://ShivaniAdimulam:6YVITVtB4JZQZ2Qb@cluster0.vhsq6.mongodb.net/hts?retryWrites=true&w=majority"                       //"mongodb://localhost:27017/hts";
 
 mongoose.connect(uri).then(() => {
   console.log('Connected to MongoDB successfully!');
