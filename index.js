@@ -17,6 +17,9 @@ mongoose.connect(uri).then(() => {
   console.error('Failed to connect to MongoDB:', error);
 });
 app.use('/',router)
+app.get('/',async (req, res) => {
+  res.status(200).send('Hello,To check the apis please hit api endpoints(URLs) in postman tool,Thank You!');
+})
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
